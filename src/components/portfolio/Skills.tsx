@@ -73,33 +73,36 @@ export function Skills() {
           description="A combination of frontend, backend, database, and development tools I use to build complete digital products."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {skills.map((s, i) => (
-            <motion.div
-              key={s.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              whileHover={{ y: -4 }}
-              className="glass rounded-2xl p-5 flex items-center gap-4 group hover:border-primary/40 transition-colors"
-            >
-              <div
-                className="w-12 h-12 rounded-xl grid place-items-center bg-white/5 group-hover:scale-110 transition-transform shrink-0"
-                style={{ color: s.color }}
-              >
-                <s.icon size={24} />
-              </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  {skills.map((s, i) => (
+    <motion.div
+      key={s.name}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: i * 0.05 }}
+      whileHover={{ y: -4 }}
+      className="glass rounded-2xl p-4 sm:p-5 flex items-center gap-3 sm:gap-4 group hover:border-primary/40 transition-colors"
+    >
+      <div
+        className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl grid place-items-center bg-white/5 group-hover:scale-110 transition-transform shrink-0"
+        style={{ color: s.color }}
+      >
+        <s.icon size={24} />
+      </div>
 
-              <div>
-                <div className="font-medium">{s.name}</div>
-                <div className="text-xs text-muted-foreground mt-0.5 font-mono">
-                  proficient
-                </div>
-              </div>
-            </motion.div>
-          ))}
+      <div className="min-w-0">
+        <div className="font-medium break-words">
+          {s.name}
         </div>
+
+        <div className="text-xs text-muted-foreground mt-0.5 font-mono">
+          proficient
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
       </div>
     </section>
   );
