@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
-import { Code2, Palette, Rocket } from "lucide-react";
+import { Code2, Database,  Rocket } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const cards = [
   {
     icon: Code2,
-    title: "Clean Code",
-    desc: "I write maintainable, well-structured React components with accessibility as a baseline.",
+    title: "Full-Stack Development",
+    desc: "I build complete applications across the frontend and backend, from responsive interfaces to APIs, databases, and server-side systems.",
   },
   {
-    icon: Palette,
-    title: "Design Eye",
-    desc: "Years in Adobe Creative Suite and Canva inform every layout, color, and typographic decision.",
+    icon: Database,
+    title: "Backend & APIs",
+    desc: "I develop reliable REST APIs, work with databases, and build backend services that support scalable and maintainable applications.",
   },
   {
     icon: Rocket,
-    title: "Growth Driven",
-    desc: "Constantly learning — Next.js, TypeScript, and motion design are next on my roadmap.",
+    title: "Continuous Growth",
+    desc: "I'm constantly learning and improving my skills across modern frontend, backend, cloud, and software development technologies.",
   },
 ];
 
