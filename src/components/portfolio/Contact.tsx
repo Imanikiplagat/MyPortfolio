@@ -4,24 +4,58 @@ import { Mail, Send, MapPin } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-    (e.target as HTMLFormElement).reset();
+
+    setSending(true);
+    setError("");
+
+    const form = e.currentTarget;
+
+    const formData = new FormData(form);
+
+    formData.append(
+      "access_key",
+       import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSent(true);
+        form.reset();
+
+        setTimeout(() => {
+          setSent(false);
+        }, 4000);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Unable to send your message. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
     <section id="contact" className="py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="container mx-auto px-6">
         <SectionHeading
-          eyebrow="Get in touch"
-          title="Let's build something"
-          description="I'm open to new projects, collaborations, and full-time opportunities."
+          eyebrow="Contact"
+          title="Let's work together"
+          description="Have a project, opportunity, or idea? I'd love to hear from you."
         />
 
         <div className="grid lg:grid-cols-5 gap-6">
@@ -33,7 +67,10 @@ export function Contact() {
             className="lg:col-span-2 glass rounded-2xl p-7 flex flex-col gap-5"
           >
             <div>
-              <h3 className="text-xl font-semibold">Contact details</h3>
+              <h3 className="text-xl font-semibold">
+                Contact details
+              </h3>
+
               <p className="text-sm text-muted-foreground mt-2">
                 Prefer email? Drop a line. I usually reply within 24 hours.
               </p>
@@ -47,8 +84,10 @@ export function Contact() {
                 <span className="w-9 h-9 rounded-lg bg-primary/15 text-primary grid place-items-center group-hover:scale-110 transition">
                   <Mail size={16} />
                 </span>
+
                 kiplagatfaith88@gmail.com
               </a>
+
               <a
                 href="https://www.linkedin.com/in/faith-kiplagat-35b455293/"
                 target="_blank"
@@ -58,8 +97,10 @@ export function Contact() {
                 <span className="w-9 h-9 rounded-lg bg-primary/15 text-primary grid place-items-center group-hover:scale-110 transition">
                   <FaLinkedin size={16} />
                 </span>
+
                 linkedin.com/in/faith-kiplagat
               </a>
+
               <a
                 href="https://github.com/Imanikiplagat"
                 target="_blank"
@@ -69,12 +110,15 @@ export function Contact() {
                 <span className="w-9 h-9 rounded-lg bg-primary/15 text-primary grid place-items-center group-hover:scale-110 transition">
                   <FaGithub size={16} />
                 </span>
+
                 github.com/faykiplagat
               </a>
+
               <div className="flex items-center gap-3 text-muted-foreground">
                 <span className="w-9 h-9 rounded-lg bg-primary/15 text-primary grid place-items-center">
                   <MapPin size={16} />
                 </span>
+
                 Nairobi, Kenya · Remote-friendly
               </div>
             </div>
@@ -89,14 +133,31 @@ export function Contact() {
             className="lg:col-span-3 glass rounded-2xl p-7 space-y-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
-              <Field label="Name" name="name" placeholder="Your name" />
-              <Field label="Email" name="email" type="email" placeholder="you@email.com" />
+              <Field
+                label="Name"
+                name="name"
+                placeholder="Your name"
+              />
+
+              <Field
+                label="Email"
+                name="email"
+                type="email"
+                placeholder="you@email.com"
+              />
             </div>
-            <Field label="Subject" name="subject" placeholder="What's this about?" />
+
+            <Field
+              label="Subject"
+              name="subject"
+              placeholder="What's this about?"
+            />
+
             <div>
               <label className="text-xs uppercase tracking-wider text-muted-foreground font-mono">
                 Message
               </label>
+
               <textarea
                 required
                 name="message"
@@ -105,12 +166,25 @@ export function Contact() {
                 className="mt-2 w-full rounded-xl bg-input/40 border border-border px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition resize-none"
               />
             </div>
+
+            {error && (
+              <p className="text-sm text-red-500">
+                {error}
+              </p>
+            )}
+
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium glow-primary hover:scale-[1.02] transition w-full sm:w-auto justify-center"
+              disabled={sending}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium glow-primary hover:scale-[1.02] transition w-full sm:w-auto justify-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {sent ? "Message sent ✓" : "Send message"}
-              {!sent && <Send size={15} />}
+              {sending
+                ? "Sending..."
+                : sent
+                ? "Message sent ✓"
+                : "Send message"}
+
+              {!sending && !sent && <Send size={15} />}
             </button>
           </motion.form>
         </div>
@@ -132,10 +206,15 @@ function Field({
 }) {
   return (
     <div>
-      <label className="text-xs uppercase tracking-wider text-muted-foreground font-mono">
+      <label
+        htmlFor={name}
+        className="text-xs uppercase tracking-wider text-muted-foreground font-mono"
+      >
         {label}
       </label>
+
       <input
+        id={name}
         required
         name={name}
         type={type}
