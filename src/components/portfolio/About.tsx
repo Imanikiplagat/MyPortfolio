@@ -34,21 +34,24 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3 space-y-5 text-muted-foreground leading-relaxed"
           >
-            <p className="text-foreground text-lg">
-              I'm Fay — a front-end developer based in Kenya, obsessed with the intersection of
-              code and visual design.
-            </p>
-            <p>
-              My journey started with curiosity about how the web works and grew into a deep love
-              for crafting interfaces that feel effortless. I believe great products come from
-              empathy: understanding users, anticipating needs, and removing friction every step
-              of the way.
-            </p>
-            <p>
-              Right now I'm sharpening my React and TypeScript skills, exploring motion design,
-              and contributing to open-source projects. My goal? To join a forward-thinking team
-              where I can build products that genuinely improve people's everyday lives.
-            </p>
+          <p className="text-foreground text-lg">
+            I'm Fay — a full-stack developer based in Kenya, passionate about turning
+            ideas into scalable, meaningful digital products.
+          </p>
+
+          <p>
+            My journey into software development started with curiosity about how the
+            web works and evolved into a passion for building complete applications.
+            I work across the stack, creating responsive and intuitive interfaces while
+            developing the APIs, databases, and backend systems that power them.
+          </p>
+
+          <p>
+            I'm currently deepening my expertise in React, TypeScript, and modern
+            backend technologies, with a focus on building scalable, maintainable, and
+            user-centered applications. I enjoy solving real-world problems through
+            technology and continuously learning new tools and approaches along the way.
+          </p>
           </motion.div>
 
           <div className="lg:col-span-2 grid gap-3">

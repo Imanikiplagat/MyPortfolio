@@ -17,7 +17,7 @@ export function Hero() {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]"
           >
             Hi, I'm Faith Kiplagat —<br />
-            <span className="text-gradient">Front-End Developer</span>
+            <span className="text-gradient">Full-Stack Developer</span>
           </motion.h1>
 
           <motion.p
@@ -26,9 +26,12 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed"
           >
-            I craft fast, accessible, and beautifully designed web experiences using
-            <span className="text-foreground"> React, JavaScript, HTML, CSS,</span> and a sharp eye
-            for UI design.
+            I build thoughtful, scalable digital products across the full stack,
+            combining{" "}
+            <span className="text-foreground">
+              React, TypeScript, Node.js, Django,
+            </span>{" "}
+            and modern web technologies with a strong focus on user experience.
           </motion.p>
 
           <motion.div
@@ -62,7 +65,7 @@ export function Hero() {
           >
             {[
               { n: "20+", l: "Projects" },
-              { n: "2+", l: "Years coding" },
+              { n: "3+", l: "Years coding" },
               { n: "100%", l: "Passion" },
             ].map((s) => (
               <div key={s.l}>

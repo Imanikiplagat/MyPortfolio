@@ -1,39 +1,79 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
+
 import {
   SiHtml5,
   SiCss,
   SiJavascript,
+  SiTypescript,
   SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiDjango,
+  SiPython,
+  SiPostgresql,
+  SiMongodb,
   SiGit,
   SiGithub,
   SiFigma,
+  SiPostman,
+  SiVite,
+  SiTailwindcss,
 } from "react-icons/si";
-import { Smartphone, Palette } from "lucide-react";
+
+import {
+  Smartphone,
+  Palette,
+  Server,
+  Database,
+  Cloud,
+} from "lucide-react";
 
 const skills = [
-  { name: "HTML", icon: SiHtml5, color: "#e34f26" },
-  { name: "CSS", icon: SiCss, color: "#1572b6" },
+  // Frontend
+  { name: "HTML5", icon: SiHtml5, color: "#e34f26" },
+  { name: "CSS3", icon: SiCss, color: "#1572b6" },
   { name: "JavaScript", icon: SiJavascript, color: "#f7df1e" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178c6" },
   { name: "React", icon: SiReact, color: "#61dafb" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06b6d4" },
+  { name: "Vite", icon: SiVite, color: "#646cff" },
   { name: "Responsive Design", icon: Smartphone, color: "#22d3ee" },
+
+  // Backend
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "Express.js", icon: SiExpress, color: "#ffffff" },
+  { name: "Python", icon: SiPython, color: "#3776ab" },
+  { name: "Django", icon: SiDjango, color: "#092e20" },
+  { name: "REST APIs", icon: Server, color: "#a78bfa" },
+
+  // Databases
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169e1" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47a248" },
+  { name: "Databases", icon: Database, color: "#38bdf8" },
+
+  // Tools
   { name: "Git", icon: SiGit, color: "#f05032" },
   { name: "GitHub", icon: SiGithub, color: "#ffffff" },
-  { name: "Canva", icon: SiFigma, color: "#00c4cc" },
-  { name: "Adobe Creative Suite", icon: Palette, color: "#ff0080" },
+  { name: "Postman", icon: SiPostman, color: "#ff6c37" },
+  { name: "Figma", icon: SiFigma, color: "#f24e1e" },
+
+  // Design & Deployment
+  { name: "UI/UX Design", icon: Palette, color: "#ec4899" },
+  { name: "Cloud & Deployment", icon: Cloud, color: "#38bdf8" },
 ];
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 relative">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="skills" className="py-24">
+      <div className="container mx-auto px-6">
         <SectionHeading
-          eyebrow="Toolkit"
-          title="Skills & technologies"
-          description="The tools I reach for to take ideas from sketch to shipped."
+          eyebrow="Skills"
+          title="Technologies I work with"
+          description="A combination of frontend, backend, database, and development tools I use to build complete digital products."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {skills.map((s, i) => (
             <motion.div
               key={s.name}
@@ -45,14 +85,17 @@ export function Skills() {
               className="glass rounded-2xl p-5 flex items-center gap-4 group hover:border-primary/40 transition-colors"
             >
               <div
-                className="w-12 h-12 rounded-xl grid place-items-center bg-white/5 group-hover:scale-110 transition-transform"
+                className="w-12 h-12 rounded-xl grid place-items-center bg-white/5 group-hover:scale-110 transition-transform shrink-0"
                 style={{ color: s.color }}
               >
                 <s.icon size={24} />
               </div>
+
               <div>
                 <div className="font-medium">{s.name}</div>
-                <div className="text-xs text-muted-foreground mt-0.5 font-mono">proficient</div>
+                <div className="text-xs text-muted-foreground mt-0.5 font-mono">
+                  proficient
+                </div>
               </div>
             </motion.div>
           ))}
