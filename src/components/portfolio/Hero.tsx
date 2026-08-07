@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section id="home" className="relative pt-32 pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10 [background:var(--gradient-hero)]" />
-      <div className="absolute inset-0 -z-10 opacity-[0.04] [background-image:linear-gradient(var(--color-foreground)_1px,transparent_1px),linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] [background-size:60px_60px]" />
+      <div className="absolute inset-0 -z-10 opacity-[0.04] " />
 
       <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-[1fr_auto] gap-12 items-center">
         <div>          <motion.h1
