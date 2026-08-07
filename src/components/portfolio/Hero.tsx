@@ -78,31 +78,38 @@ export function Hero() {
           </motion.div>
         </div>
 
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="relative flex justify-center lg:justify-end"
+      >
+        <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-2xl" />
+
+        <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden glass-strong p-1.5">
+          <img
+            src={me}
+            alt="Fay Kiplagat portrait"
+            width={288}
+            height={288}
+            className="w-full h-full object-cover rounded-[1.25rem]"
+          />
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative hidden lg:block"
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 3, repeat: Infinity }}
+          className="absolute -bottom-4 left-1/2 -translate-x-1/2 lg:left-auto lg:-translate-x-0 lg:-left-4 glass-strong rounded-2xl px-4 py-3 text-xs"
         >
-          <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-2xl" />
-          <div className="relative w-72 h-72 rounded-3xl overflow-hidden glass-strong p-1.5">
-            <img
-              src={me}
-              alt="Fay Kiplagat portrait"
-              width={288}
-              height={288}
-              className="w-full h-full object-cover rounded-[1.25rem]"
-            />
+          <div className="text-muted-foreground">
+            Currently building
           </div>
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 3, repeat: Infinity }}
-            className="absolute -bottom-4 -left-4 glass-strong rounded-2xl px-4 py-3 text-xs"
-          >
-            <div className="text-muted-foreground">Currently building</div>
-            <div className="font-mono text-primary mt-0.5">~/Korva Ventures</div>
-          </motion.div>
+
+          <div className="font-mono text-primary mt-0.5">
+            ~/Korva Ventures
+          </div>
         </motion.div>
+      </motion.div>
       </div>
     </section>
   );
