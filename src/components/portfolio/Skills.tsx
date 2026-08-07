@@ -13,14 +13,13 @@ import {
   SiPython,
   SiPostgresql,
   SiMongodb,
-  SiGit,
-  SiGithub,
+  SiGit,  
   SiFigma,
   SiPostman,
   SiVite,
   SiTailwindcss,
 } from "react-icons/si";
-
+import { FaGithub } from "react-icons/fa";
 import {
   Smartphone,
   Palette,
@@ -42,7 +41,7 @@ const skills = [
 
   // Backend
   { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "Express.js", icon: SiExpress, color: "#ffffff" },
+  { name: "Express.js", icon: SiExpress, color: "#339933" },
   { name: "Python", icon: SiPython, color: "#3776ab" },
   { name: "Django", icon: SiDjango, color: "#092e20" },
   { name: "REST APIs", icon: Server, color: "#a78bfa" },
@@ -54,7 +53,7 @@ const skills = [
 
   // Tools
   { name: "Git", icon: SiGit, color: "#f05032" },
-  { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+  { name: "GitHub", icon: FaGithub, color: "#f05032" },
   { name: "Postman", icon: SiPostman, color: "#ff6c37" },
   { name: "Figma", icon: SiFigma, color: "#f24e1e" },
 

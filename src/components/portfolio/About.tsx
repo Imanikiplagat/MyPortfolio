@@ -35,7 +35,7 @@ export function About() {
             className="lg:col-span-3 space-y-5 text-muted-foreground leading-relaxed"
           >
           <p className="text-foreground text-lg">
-            I'm Fay — a full-stack developer based in Kenya, passionate about turning
+            I'm Faith — a full-stack developer based in Kenya, passionate about turning
             ideas into scalable, meaningful digital products.
           </p>
 

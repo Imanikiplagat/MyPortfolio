@@ -29,7 +29,7 @@ export function Hero() {
             I build thoughtful, scalable digital products across the full stack,
             combining{" "}
             <span className="text-foreground">
-              React, TypeScript, Node.js, Django,
+              MongoDB, Express.js, React, Node.js (MERN)
             </span>{" "}
             and modern web technologies with a strong focus on user experience.
           </motion.p>
