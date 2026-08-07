@@ -2,6 +2,9 @@
 
 > A modern, responsive personal portfolio showcasing my skills, experience, projects, and journey as a frontend developer.
 
+# Live Demo
+https://my-portfolio-one-delta-96gchoktrf.vercel.app/
+
 ## About
 
 Hi, I'm **Faith Kiplagat**, a frontend developer passionate about creating modern, responsive, and user-friendly web experiences.
