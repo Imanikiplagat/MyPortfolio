@@ -9,45 +9,55 @@ export function Contact() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
 
-  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    setSending(true);
-    setError("");
+  setSending(true);
+  setError("");
 
-    const form = e.currentTarget;
+  const form = e.currentTarget;
+  const formData = new FormData(form);
 
-    const formData = new FormData(form);
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-    formData.append(
-      "access_key",
-       import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
-    );
+  console.log("Access key exists:", !!accessKey);
 
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
+  if (!accessKey) {
+    setError("Web3Forms access key is missing.");
+    setSending(false);
+    return;
+  }
 
-      const data = await response.json();
+  formData.append("access_key", accessKey);
+  formData.append("from_name", "Faith Kiplagat Portfolio");
 
-      if (data.success) {
-        setSent(true);
-        form.reset();
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
 
-        setTimeout(() => {
-          setSent(false);
-        }, 4000);
-      } else {
-        setError("Something went wrong. Please try again.");
-      }
-    } catch {
-      setError("Unable to send your message. Please try again.");
-    } finally {
-      setSending(false);
+    const data = await response.json();
+
+    console.log("Web3Forms response:", data);
+
+    if (data.success) {
+      setSent(true);
+      form.reset();
+
+      setTimeout(() => {
+        setSent(false);
+      }, 4000);
+    } else {
+      setError(data.message || "Something went wrong.");
     }
-  };
+  } catch (error) {
+    console.error("Form submission error:", error);
+    setError("Unable to send your message. Please try again.");
+  } finally {
+    setSending(false);
+  }
+};
 
   return (
     <section id="contact" className="py-24">
