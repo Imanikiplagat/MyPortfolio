@@ -1,186 +1,215 @@
-# ✨ Faith Kiplagat — Personal Portfolio
+# Faith Kiplagat — Portfolio
 
-A modern, responsive personal portfolio website showcasing my experience, skills, projects, and background as a frontend developer.
+> A modern, responsive personal portfolio showcasing my skills, experience, projects, and journey as a frontend developer.
 
-The portfolio is designed to provide a clean and interactive way to explore my work, technologies I use, and projects I have contributed to.
+## About
 
-## 🚀 Live Website
+Hi, I'm **Faith Kiplagat**, a frontend developer passionate about creating modern, responsive, and user-friendly web experiences.
 
-https://my-portfolio-one-delta-96gchoktrf.vercel.app/
+I enjoy transforming ideas and designs into functional digital products using modern web technologies. My focus is on frontend development, responsive design, UI implementation, and creating intuitive user experiences.
 
-## 👩🏽‍💻 About
+## Tech Stack
 
-Hi, I'm **Faith Kiplagat**, a frontend developer passionate about building modern, responsive, and user-friendly web applications.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- JavaScript
+- HTML5
+- CSS3
+- Lucide React
+- React Icons
+- Git
+- GitHub
 
-I enjoy turning ideas and designs into functional digital experiences using modern web technologies. My work focuses primarily on frontend development, UI implementation, responsive design, and creating intuitive user experiences.
+## Features
 
-## 🛠️ Technologies
+- Responsive design
+- Modern and clean user interface
+- Hero section
+- About section
+- Skills section
+- Projects showcase
+- Experience timeline
+- Contact section
+- Social media links
+- Downloadable CV
+- Smooth navigation
+- Responsive mobile navigation
+- Interactive UI elements
 
-This portfolio is built using:
+## Sections
 
-- **React**
-- **TypeScript**
-- **Vite**
-- **Tailwind CSS**
-- **Lucide React**
-- **React Icons**
-- **HTML5**
-- **CSS3**
-- **Git & GitHub**
+### Hero
 
-## 📂 Project Structure
+An introduction section highlighting who I am, my role, and what I do.
 
-src/
-├── assets/
-│   └── images and other assets
-│
-├── components/
-│   └── portfolio/
-│       ├── About.tsx
-│       ├── Contact.tsx
-│       ├── Experience.tsx
-│       ├── Footer.tsx
-│       ├── Hero.tsx
-│       ├── Navbar.tsx
-│       ├── Projects.tsx
-│       ├── SectionHeading.tsx
-│       └── Skills.tsx
-│
-├── App.tsx
-├── index.css
-└── main.tsx
+### About
 
-## ✨ Features
-🏠 Hero Section
+A brief overview of my background, interests, and approach to software development.
 
-Introduces who I am, what I do, and provides quick access to the rest of the portfolio.
+### Skills
 
-👩🏽 About Section
+A showcase of the technologies, tools, and development skills I use.
 
-Provides an overview of my background, interests, and approach to software development.
+### Projects
 
-💻 Skills Section
+A collection of selected projects I've worked on, including personal, freelance, internship, and professional projects.
 
-Highlights the technologies, tools, and development skills I work with.
+Some of the featured projects include:
 
-🚀 Projects Section
+- **PulseWave** — A digital transformation and e-government solutions platform.
+- **Korva** — A digital platform focused on financial and asset management.
+- **Personal Projects** — Various web applications and experiments built while learning and developing my skills.
 
-Showcases selected projects with descriptions, technologies used, and links where available.
+### Experience
 
-Featured work includes projects such as:
+A timeline showcasing my professional experience, internships, freelance work, and other relevant development experience.
 
-PulseWave — Digital transformation and e-government solutions.
-Korva — A platform focused on managing financial and digital assets.
-Other personal and professional development projects.
-💼 Experience Section
+### Contact
 
-Highlights my professional experience, internships, freelance work, and relevant development experience.
+A section where visitors can find ways to contact me for collaborations, opportunities, or projects.
 
-📬 Contact Section
+## Project Structure
 
-Provides visitors with ways to get in touch with me for opportunities, collaborations, or projects.
+    src/
+    ├── assets/
+    │   └── images and other assets
+    │
+    ├── components/
+    │   └── portfolio/
+    │       ├── About.tsx
+    │       ├── Contact.tsx
+    │       ├── Experience.tsx
+    │       ├── Footer.tsx
+    │       ├── Hero.tsx
+    │       ├── Navbar.tsx
+    │       ├── Projects.tsx
+    │       ├── SectionHeading.tsx
+    │       └── Skills.tsx
+    │
+    ├── App.tsx
+    ├── index.css
+    └── main.tsx
 
-🔗 Social Links
+## Getting Started
 
-The portfolio includes links to my professional and social profiles, including:
+### Prerequisites
 
-GitHub
-LinkedIn
-X/Twitter
-Email
-🎨 Design
-
-The portfolio focuses on:
-
-Clean and modern UI
-Responsive layouts
-Mobile-first design
-Smooth transitions and interactions
-Clear typography
-Accessible components
-Consistent spacing and visual hierarchy
-⚙️ Getting Started
-Prerequisites
-
-Make sure you have Node.js and npm installed.
+Make sure you have **Node.js** and **npm** installed.
 
 Check your versions:
 
-node -v
-npm -v
-Installation
+    node -v
+    npm -v
+
+### Installation
 
 Clone the repository:
 
-git clone <your-repository-url>
+    git clone <your-repository-url>
 
 Navigate into the project:
 
-cd myPortfolio
+    cd myPortfolio
 
-Install dependencies:
+Install the dependencies:
 
-npm install
-Development
+    npm install
 
-Start the Vite development server:
+### Development
 
-npm run dev
+Start the development server:
 
-The application will be available at the local URL provided by Vite, usually:
+    npm run dev
 
-http://localhost:5173
-Production Build
+The application will be available at:
+
+    http://localhost:5173
+
+### Production Build
 
 Create a production build:
 
-npm run build
+    npm run build
 
-Preview the production build locally:
+Preview the production build:
 
-npm run preview
-📱 Responsive Design
+    npm run preview
 
-The portfolio is designed to work across different screen sizes, including:
+## Responsive Design
 
-📱 Mobile
-📱 Tablets
-💻 Laptops
-🖥️ Desktop displays
-📸 Screenshots
+The portfolio is designed to provide a consistent experience across:
 
-Screenshots can be added here once the final UI is complete.
+- Mobile devices
+- Tablets
+- Laptops
+- Desktop screens
 
-screenshots/
-├── home.png
-├── about.png
-├── projects.png
-└── contact.png
-📌 Future Improvements
+## Projects
 
-Some planned improvements include:
+### PulseWave
 
- Add live project demos
- Improve animations and page transitions
- Add downloadable CV
- Add project filtering
- Improve accessibility
- Add a blog/articles section
- Add contact form integration
- Deploy the final portfolio
-📄 License
+A professional website showcasing digital transformation and e-government solutions for public-sector institutions.
 
-This project is intended as a personal portfolio and showcase of my work.
+### Korva
 
-📬 Contact
+A digital platform focused on managing financial and intellectual assets.
 
-If you'd like to collaborate, discuss a project, or connect professionally, feel free to reach out.
+### Other Projects
 
-Faith Kiplagat
+The portfolio also showcases additional personal, freelance, internship, and professional projects.
 
-GitHub: https://github.com/Imanikiplagat
-LinkedIn: https://www.linkedin.com/in/faith-kiplagat-35b455293/
-X: https://x.com/kiplagat2307
-Email: kiplagatfaith88@gmail.com
+## Experience
 
-Built with ❤️ using React, TypeScript, Vite, and Tailwind CSS.
+My experience includes:
+
+- **Bunifu** — January 2026 – Present
+- **PLP Academy** — July 2025 – December 2025
+- **PulseWave Technologies** — May 2025 – August 2025
+- **Freelance Development** — 2024 – Present
+
+## Social Links
+
+- [GitHub](https://github.com/Imanikiplagat)
+- [LinkedIn](https://www.linkedin.com/in/faith-kiplagat-35b455293/)
+- [X](https://x.com/kiplagat2307)
+- [Email](mailto:kiplagatfaith88@gmail.com)
+
+## Future Improvements
+
+- [ ] Add live project demonstrations
+- [ ] Improve page animations
+- [ ] Add project filtering
+- [ ] Improve accessibility
+- [ ] Add a blog section
+- [ ] Add contact form functionality
+- [ ] Deploy the final portfolio
+- [ ] Add analytics
+
+## Deployment
+
+The portfolio can be deployed using platforms such as:
+
+- Vercel
+- Netlify
+- Cloudflare Pages
+
+## License
+
+This project is a personal portfolio and is intended to showcase my work, skills, and experience.
+
+## Author
+
+**Faith Kiplagat**
+
+Frontend Developer | React Developer
+
+- GitHub: [Imanikiplagat](https://github.com/Imanikiplagat)
+- LinkedIn: [Faith Kiplagat](https://www.linkedin.com/in/faith-kiplagat-35b455293/)
+- X: [@kiplagat2307](https://x.com/kiplagat2307)
+- Email: [kiplagatfaith88@gmail.com](mailto:kiplagatfaith88@gmail.com)
+
+---
+
+Made with ❤️ using React, TypeScript, Vite, and Tailwind CSS.
