@@ -4,6 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 import p1 from "../../assets/pulsewave.png";
 import p2 from "../../assets/image.png";
 import p3 from "../../assets/home.png";
+import p4 from "../../assets/project-4.png";
 import { FaGithub } from "react-icons/fa";
 
 const projects = [
@@ -16,6 +17,15 @@ const projects = [
     github: "https://github.com/Imanikiplagat/pulsewave-v2.git",
     demo: "https://pulsewave-v2-8xkq.vercel.app/",
   },
+  {
+  title: "Blumora Florals – Floral E-Commerce Platform",
+  description:
+    "Built a modern, responsive e-commerce platform for Blumora Florals, enabling customers to explore floral arrangements, create custom bouquets, purchase gifts, manage their cart, and place orders through a seamless shopping experience.",
+  image: p4,
+  tags: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+  github: "https://github.com/Imanikiplagat/blumora_florals.git",
+  demo: "https://blumora-florals.vercel.app/",
+},
   {
     title: "AgroVision AI - AI-Powered Agricultural Intelligence Platform",
     description:
